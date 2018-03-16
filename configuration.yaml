@@ -1,0 +1,103 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 52.2154
+  longitude: 6.8826
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 37
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Amsterdam
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  base_url: https://rgn-hass.duckdns.org:8100
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+#discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+#cloud:
+
+hassio:
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+google_assistant:
+  project_id: hass-ce8ef
+  client_id: Dwnqqug0lLzxw0lTGKSo
+  access_token: ekL6cMngIq4QJOjAd0hjwevcppvNdeCRfj3iGcSBOrELaiKatCrbl9YkhEJjwT9CH4Xl4HzvMvLOfWVF
+  agent_user_id: rgn-hass
+  api_key: AIzaSyDXJThQxNHEyWkwND7BJm3R3lmdI_P6Q00
+  exposed_domains:
+    - switch
+    - light
+    - group
+    - media_player
+
+tradfri:
+  host: 192.168.5.21
+
+media_player:
+  - platform: sonos
+    hosts: 192.168.1.21
+  - platform: philips_tv
+    host: 192.168.5.23
+
+light: 
+  - platform: yeelight
+    devices:
+      192.168.5.22:
+        name: Dining Light
+        transition: 1000
+        use_music_mode: True #(defaults to False)

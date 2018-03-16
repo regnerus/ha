@@ -1,0 +1,8 @@
+media_player.living_room_speaker:
+  name:
+  platform: cast
+  unique_id: eb88b4d4-00ff-d85b-fe34-8e2ff40ac7f4
+media_player.living_room:
+  name:
+  platform: sonos
+  unique_id: RINCON_5CAAFDF7D3F801400
