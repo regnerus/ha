@@ -9,17 +9,10 @@ kitchen_lights_card:
     entities:
       - light.k_main_light
 
-bedroom_main_lights_card:
-    name: Ceiling Light
-    icon: mdi:lightbulb
-    entities:
-      - light.b_main_light_1
-      - light.b_main_light_2
-
 bedroom_lights_card:
     name: Bedroom Lights
     entities:
-      - group.bedroom_main_lights_card
+      - light.bedroom_ceiling_light
       - light.b_bedside_bouke
       - light.b_bedside_loes
 
@@ -32,17 +25,10 @@ alarm_clock_card:
       - input_slider.alarmminutes
       - input_boolean.alarmweekday
 
-living_room_main_lights_card:
-    name: Ceiling Light
-    icon: mdi:lightbulb
-    entities:
-      - light.l_main_light_1
-      - light.l_main_light_2
-
 living_room_lights_card:
     name: Living Room Lights
     entities:
-      - group.living_room_main_lights_card
+      - light.living_room_ceiling_light
       - light.l_table_light
       - light.dining_light
 
