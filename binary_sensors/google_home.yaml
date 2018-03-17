@@ -1,0 +1,3 @@
+platform: ping
+name: Google Home
+host: 192.168.1.22

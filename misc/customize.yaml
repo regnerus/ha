@@ -1,5 +1,5 @@
     media_player.living_room:
-      friendly_name: Sonos
+      friendly_name: Sonos Play:5
       icon: mdi:speaker
 
     light.h_downstairs_light:
