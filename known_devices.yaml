@@ -1,6 +1,0 @@
-devicename:
-  name: Tradfri Hub
-  mac: b8:d7:af:2b:3b:93
-  picture: https://home-assistant.io/images/favicon-192x192.png
-  track: yes
-  hide_if_away: no

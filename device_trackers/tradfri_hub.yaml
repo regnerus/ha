@@ -1,3 +1,0 @@
-platform: ping
-hosts:
-  tradfri_hub: 192.168.5.21
