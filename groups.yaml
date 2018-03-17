@@ -23,12 +23,10 @@ study_lights_card:
 
 alarm_clock_card:
     name: Alarm Clock
-    entities: 
-      # - automation.alarm_clock
-      # - sensor.alarm_time
-      - input_slider.alarmhour
-      - input_slider.alarmminutes
-      - input_boolean.alarmweekday
+    entities:
+      - input_select.alarm_clock
+      - input_boolean.alarm_weekday
+      - input_boolean.natural_wakeup
 
 living_room_lights_card:
     name: Living Room Lights
@@ -42,19 +40,19 @@ living_room_view:
     view: yes
     entities: 
       - group.living_room_lights_card
+      - media_player.living_room
       # - group.living_room_devices_card
       # - group.living_room_sensors
       # - group.media_equipment_card
-      - media_player.living_room
 
 bedroom_view:
     name: Bedroom
     view: yes
     entities:
       - group.bedroom_lights_card
+      - group.alarm_clock_card
       # - group.bedroom_devices_card
       # - group.bathroom_lights_card
       # - group.bathroom_sensors_card
-      - group.alarm_clock_card
       # - media_player.bedroom_home
       # - camera.crate
