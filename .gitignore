@@ -17,7 +17,7 @@ lib
 deps
 tts
 secrets.yaml
-#known_devices.yaml
+known_devices.yaml
 pyozw.sqlite
 ip_bans.yaml
 .*
