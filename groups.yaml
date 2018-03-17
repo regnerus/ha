@@ -58,3 +58,9 @@ bedroom_view:
       # - group.bathroom_sensors_card
       # - media_player.bedroom_home
       # - camera.crate
+
+people_status:
+  name: People Status
+  entities:
+    - sensor.bouke_status
+    - sensor.loes_status

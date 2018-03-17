@@ -1,19 +1,25 @@
 bouke_status:
   name: Bouke Status
   options:
-   - "Home"
-   - "University"
-   - "Away"
-   - "Sleeping"
+   - Home
+   - University
+   - Sleeping
+   - Just Arrived
+   - Just Left
+   - Away
+   - Extended Away
   initial: "Home"
 ####
 loes_status:
   name: Loes Status
   options:
-   - "Home"
-   - "University"
-   - "Away"
-   - "Sleeping"
+   - Home
+   - University
+   - Sleeping
+   - Just Arrived
+   - Just Left
+   - Away
+   - Extended Away
   initial: "Home"
 ####
 alarm_clock:
