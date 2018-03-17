@@ -91,8 +91,8 @@ tradfri:
 media_player:
   - platform: sonos
     hosts: 192.168.1.21
-  - platform: philips_tv
-    host: 192.168.5.23
+  # - platform: philips_tv
+  #   host: 192.168.5.23
 
 light: 
   - platform: yeelight
