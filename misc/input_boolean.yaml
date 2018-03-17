@@ -12,3 +12,8 @@ natural_wakeup:
   name: Natural Wakeup
   initial: on
   icon: mdi:theme-light-dark
+
+house_vacation:
+  name: Vacation Mode
+  initial: off
+  icon: mdi:map-marker
