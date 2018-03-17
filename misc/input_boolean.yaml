@@ -1,0 +1,9 @@
+alarm_weekday:
+  name: Weekdays Only
+  initial: on
+  icon: mdi:calendar
+
+natural_wakeup:
+  name: Natural Wakeup
+  initial: on
+  icon: mdi:theme-light-dark

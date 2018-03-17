@@ -69,8 +69,8 @@ hassio:
 alert: !include_dir_merge_named alerts/
 automation: !include automations.yaml
 device_tracker: !include_dir_merge_list device_trackers/
-#input_boolean: !include misc/input_boolean.yaml
-#input_select: !include misc/input_select.yaml
+input_boolean: !include misc/input_boolean.yaml
+input_select: !include misc/input_select.yaml
 #input_slider: !include misc/input_slider.yaml
 media_player: !include_dir_list media_player/
 binary_sensor: !include_dir_list binary_sensors/
