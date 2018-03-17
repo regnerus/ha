@@ -10,7 +10,8 @@ kitchen_lights_card:
       - light.k_main_light
 
 bedroom_main_lights_card:
-    name: Ceiling Lights
+    name: Ceiling Light
+    icon: mdi: lightbulb
     entities:
       - light.b_main_light_1
       - light.b_main_light_2
@@ -32,7 +33,8 @@ alarm_clock_card:
       - input_boolean.alarmweekday
 
 living_room_main_lights_card:
-    name: Ceiling Lights
+    name: Ceiling Light
+    icon: mdi: lightbulb
     entities:
       - light.l_main_light_1
       - light.l_main_light_2
