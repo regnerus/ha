@@ -23,6 +23,7 @@ study_lights_card:
 
 alarm_clock_card:
     name: Alarm Clock
+    control: hidden
     entities:
       - input_boolean.alarm_on
       - input_select.alarm_clock
