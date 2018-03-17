@@ -24,10 +24,10 @@
       friendly_name: Table Light
 
     group.living_room_main_lights_card:
-      icon: mdi: lightbulb
+      icon: mdi:lightbulb
 
     group.bedroom_main_lights_card:
-      icon: mdi: lightbulb
+      icon: mdi:lightbulb
 
     light.b_main_light_1:
       hidden: true
