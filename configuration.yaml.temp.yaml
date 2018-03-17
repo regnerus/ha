@@ -1,11 +1,9 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
-  latitude: 52.2154
-  longitude: 6.8826
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 37
+
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -23,12 +21,16 @@ frontend:
 config:
 
 http:
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: https://rgn-hass.duckdns.org:8100
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
-  # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
+
+  base_url: !secret base_url
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+
+  cors_allowed_origins:
+    - https://google.com
+    - https://home-assistant.io
+
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -39,7 +41,7 @@ updater:
   # include_used_components: true
 
 # Discover some devices automatically
-#discovery:
+discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -55,6 +57,15 @@ map:
 
 # Track the sun
 sun:
+
+mqtt:
+  broker: !secret mqtt_broker_ip
+  port: !secret mqtt_port
+  client_id: home-assistant-1
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  discovery: true
+  discovery_prefix: homeassistant
 
 # Weather prediction
 sensor:
@@ -75,10 +86,10 @@ script: !include scripts.yaml
 
 google_assistant:
   project_id: hass-ce8ef
-  client_id: Dwnqqug0lLzxw0lTGKSo
-  access_token: ekL6cMngIq4QJOjAd0hjwevcppvNdeCRfj3iGcSBOrELaiKatCrbl9YkhEJjwT9CH4Xl4HzvMvLOfWVF
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
   agent_user_id: rgn-hass
-  api_key: AIzaSyDXJThQxNHEyWkwND7BJm3R3lmdI_P6Q00
+  api_key: !secret
   exposed_domains:
     - switch
     - light
