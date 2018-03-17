@@ -1,4 +1,2 @@
 platform: sonos
-name: sonos
-friendly_name: Sonos Play:5
 hosts: 192.168.1.21
