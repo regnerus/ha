@@ -69,10 +69,27 @@ tts:
 
 hassio:
 
-group: !include groups.yaml
+###########INCLUDES#####
+alert: !include_dir_merge_named alerts/
 automation: !include automations.yaml
-script: !include scripts.yaml
+device_tracker: !include_dir_merge_list device_trackers/
+input_boolean: !include misc/input_boolean.yaml
+input_select: !include misc/input_select.yaml
+input_slider: !include misc/input_slider.yaml
+media_player: !include_dir_list media_player/
+binary_sensor: !include_dir_list binary_sensors/
+sensor: !include_dir_list sensors/
+light: !include_dir_list lights/
+#shell_command: !include misc/shell_commands.yaml
+switch: !include_dir_list switches/
+script: !include_dir_merge_named scripts/
+group: !include groups.yaml
+weather: !include_dir_list weather/
+#weblink: !include misc/weblinks.yaml
+zone: !include_dir_list zones/
+camera: !include_dir_list cameras/
 
+##########OTHER#####
 google_assistant:
   project_id: hass-ce8ef
   client_id: Dwnqqug0lLzxw0lTGKSo
@@ -88,16 +105,5 @@ google_assistant:
 tradfri:
   host: 192.168.5.21
 
-media_player:
-  - platform: sonos
-    hosts: 192.168.1.21
   # - platform: philips_tv
   #   host: 192.168.5.23
-
-light: 
-  - platform: yeelight
-    devices:
-      192.168.5.22:
-        name: Dining Light
-        transition: 1000
-        use_music_mode: True #(defaults to False)

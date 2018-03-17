@@ -1,0 +1,5 @@
+platform: yeelight
+devices:
+  192.168.5.22:
+    name: Dining Light
+    transition: 1000
