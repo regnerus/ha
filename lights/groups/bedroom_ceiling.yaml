@@ -1,0 +1,5 @@
+platform: group
+    name: Living Room Ceiling Light
+    entities:
+      - light.b_main_light_1
+      - light.b_main_light_2
