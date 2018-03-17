@@ -98,8 +98,8 @@ google_assistant:
     - group
     - media_player
 
-tradfri:
-  host: 192.168.5.21
+#tradfri:
+#  host: 192.168.5.21
 
   # - platform: philips_tv
   #   host: 192.168.5.23
