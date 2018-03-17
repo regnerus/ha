@@ -1,11 +1,11 @@
-kitchen_lights_card:
-    name: Kitchen Lights
+hallway_lights_card:
+    name: Hallway Lights
     entities:
       - light.h_downstairs_light
       - light.h_upstairs_light
 
-hallway_lights_card:
-    name: Hallway Lights
+kitchen_lights_card:
+    name: Kitchen Lights
     entities:
       - light.k_main_light
 

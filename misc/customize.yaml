@@ -1,3 +1,24 @@
     media_player.living_room:
       friendly_name: Sonos
       icon: mdi:speaker
+
+    light.h_downstairs_light:
+      friendly_name: Downstairs Ceiling Light
+
+    light.h_upstairs_light:
+      friendly_name: Upstairs Ceiling Light
+
+    light.kitchen_lights_card:
+      friendly_name: Ceiling Light
+
+    light.b_bedside_bouke:
+      friendly_name: Right Bedside Light
+
+    light.b_bedside_Loes:
+      friendly_name: Left Bedside Light
+
+    light.dining_light:
+      friendly_name: Dining Light
+
+    light.l_table_light:
+      friendly_name: Table Light
