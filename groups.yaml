@@ -24,6 +24,7 @@ study_lights_card:
 alarm_clock_card:
     name: Alarm Clock
     entities:
+      - input_boolean.alarm_on
       - input_select.alarm_clock
       - input_boolean.alarm_weekday
       - input_boolean.natural_wakeup

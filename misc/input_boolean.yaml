@@ -1,3 +1,8 @@
+alarm_on:
+  name: Alarm On/Off
+  initial: on
+  icon: mdi:alarm
+
 alarm_weekday:
   name: Weekdays Only
   initial: on
