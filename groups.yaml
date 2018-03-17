@@ -16,6 +16,11 @@ bedroom_lights_card:
       - light.b_bedside_bouke
       - light.b_bedside_loes
 
+study_lights_card:
+    name: Study Lights
+    entities:
+      - light.s_main_light
+
 alarm_clock_card:
     name: Alarm Clock
     entities: 

@@ -23,6 +23,18 @@
     light.l_table_light:
       friendly_name: Table Light
 
+    light.living_room_ceiling_light:
+      friendly_name: Ceiling Light
+
+    light.bedroom_ceiling_light:
+      friendly_name: Ceiling Light
+
+    light.k_main_light:
+      friendly_name: Ceiling Light
+
+    light.s_main_light:
+      friendly_name: Ceiling Light
+
     light.b_main_light_1:
       hidden: true
 
