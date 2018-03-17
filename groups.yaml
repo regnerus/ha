@@ -1,0 +1,22 @@
+living_room_main_lights_card:
+    name: Ceiling Lights
+    entities:
+      - light.l_main_light_1
+      - light.l_main_light_2
+
+living_room_lights_card:
+    name: Living Room Lights
+    entities:
+      - group.living_room_main_lights_card
+      - light.l_table_light
+      - light.dining_light
+
+living_room_view:
+    name: Living Room
+    view: yes
+    entities: 
+      - group.living_room_lights_card
+      # - group.living_room_devices_card
+      # - group.living_room_sensors
+      # - group.media_equipment_card
+      - media_player.living_room
