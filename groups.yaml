@@ -62,5 +62,5 @@ bedroom_view:
 people_status:
   name: People Status
   entities:
-    - sensor.bouke_status
-    - sensor.loes_status
+    - sensor.bouke
+    - sensor.loes
