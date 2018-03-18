@@ -1,0 +1,5 @@
+platform: mqtt
+state_topic: "owntracks/bouke/deviceid"
+name: "Battery iPhone Bouke"
+unit_of_measurement: "%"
+value_template: '{{ value_json.batt }}'
