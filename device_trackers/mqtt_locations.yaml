@@ -1,4 +1,4 @@
 platform: mqtt
-    devices:
-      bouke: 'location/bouke'
-      loes: 'location/loes'
+devices:
+  bouke: 'location/bouke'
+  loes: 'location/loes'
