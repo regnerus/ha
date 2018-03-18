@@ -1,0 +1,4 @@
+sensor:
+  - platform: mqtt
+    state_topic: "/locations/bouke"
+    friendly_name: "Bouke"
