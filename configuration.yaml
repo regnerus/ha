@@ -106,6 +106,7 @@ mqtt:
   port: 8883
   username: temp
   password: temp
+  certificate: auto
 
   # - platform: philips_tv
   #   host: 192.168.5.23
