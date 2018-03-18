@@ -1,3 +1,8 @@
+house_vacation:
+  name: Vacation Mode
+  initial: off
+  icon: mdi:map-marker
+
 alarm_on:
   name: Alarm On/Off
   initial: on
@@ -13,7 +18,3 @@ natural_wakeup:
   initial: on
   icon: mdi:theme-light-dark
 
-house_vacation:
-  name: Vacation Mode
-  initial: off
-  icon: mdi:map-marker
