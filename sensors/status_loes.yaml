@@ -1,4 +1,3 @@
-sensor:
-  - platform: mqtt
-    state_topic: "/locations/loes"
-    friendly_name: "Loes"
+platform: mqtt
+state_topic: "/locations/loes"
+friendly_name: "Loes"
