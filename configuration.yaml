@@ -106,7 +106,6 @@ mqtt:
   port: 8883
   username: temp
   password: temp
-  tls_insecure: false
 
   # - platform: philips_tv
   #   host: 192.168.5.23
