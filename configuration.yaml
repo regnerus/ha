@@ -24,7 +24,7 @@ config:
 
 http:
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: https://rgn-hass.duckdns.org:8100
+  base_url: https://hass.regner.us:8100
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
   # Secrets are defined in the file secrets.yaml
@@ -102,7 +102,7 @@ tradfri:
   host: 192.168.5.21
 
 mqtt:
-  broker: 192.168.1.100
+  broker: hass.regner.us
   port: 8883
   username: temp
   password: temp
