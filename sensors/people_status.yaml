@@ -1,8 +1,0 @@
-platform: template
-sensors:
-  bouke_status:
-    value_template: '{{ states.input_select.bouke_status.state }}'
-    friendly_name: 'Bouke'
-  loes_status:
-    value_template: '{{ states.input_select.loes_status.state }}'
-    friendly_name: 'Loes'

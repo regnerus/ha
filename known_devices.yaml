@@ -1,0 +1,13 @@
+bouke:
+  name: Bouke
+  track: yes
+  picture: https://home-assistant.io/images/favicon-192x192.png
+  track: yes
+  hide_if_away: no
+
+loes:
+  name: Loes
+  track: yes
+  picture: https://home-assistant.io/images/favicon-192x192.png
+  track: yes
+  hide_if_away: no
