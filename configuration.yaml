@@ -2,10 +2,10 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 52.2063420
-  longitude: 6.8839050
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 37
+  elevation: !secret home_elevation
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -24,9 +24,9 @@ config:
 
 http:
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: https://hass.regner.us:8100
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+  base_url: !secret base_url
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
 # Checks for available updates
@@ -89,10 +89,10 @@ camera: !include_dir_list cameras/
 ##########OTHER#####
 google_assistant:
   project_id: hass-ce8ef
-  client_id: Dwnqqug0lLzxw0lTGKSo
-  access_token: ekL6cMngIq4QJOjAd0hjwevcppvNdeCRfj3iGcSBOrELaiKatCrbl9YkhEJjwT9CH4Xl4HzvMvLOfWVF
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
   agent_user_id: rgn-hass
-  api_key: AIzaSyDXJThQxNHEyWkwND7BJm3R3lmdI_P6Q00
+  api_key: !secret AIzaSyDXJThQxNHEyWkwND7BJm3R3lmdI_P6Q00
   exposed_domains:
     - switch
     - light
@@ -103,10 +103,10 @@ tradfri:
   host: 192.168.1.20
 
 mqtt:
-  broker: hass.regner.us
-  port: 8883
-  username: temp
-  password: temp
+  broker: !secret mqtt_broker_ip
+  port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password
   certificate: auto
 
 weather:
