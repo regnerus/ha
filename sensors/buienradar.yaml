@@ -1,7 +1,7 @@
 platform: buienradar
-name: 'twente'
-latitude: 52.2063420
-longitude: 6.8839050
+name: 'Twente'
+latitude: 52.27
+longitude: 6.90
 monitored_conditions:
   - symbol
   - humidity
