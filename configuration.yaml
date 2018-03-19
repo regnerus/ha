@@ -92,7 +92,7 @@ google_assistant:
   client_id: !secret ga_client_id
   access_token: !secret ga_access_token
   agent_user_id: rgn-hass
-  api_key: !secret AIzaSyDXJThQxNHEyWkwND7BJm3R3lmdI_P6Q00
+  api_key: !secret ga_api_key
   exposed_domains:
     - switch
     - light
