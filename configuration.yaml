@@ -109,5 +109,8 @@ mqtt:
   password: temp
   certificate: auto
 
+weather:
+  - platform: buienradar
+
   # - platform: philips_tv
   #   host: 192.168.5.23
