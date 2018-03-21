@@ -1,5 +1,6 @@
 platform: unifi
-host: unifi
+host: !secret unifi_host
+port: !secret unifi_port
 username: !secret unifi_username
 password: !secret unifi_password
 ssid_filter:
