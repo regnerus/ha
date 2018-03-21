@@ -1,0 +1,8 @@
+platform: unifi
+host: unifi
+username: !secret unifi_username
+password: !secret unifi_password
+ssid_filter:
+  - 'Weth. Beversstraat 96'
+  - 'Weth. Beversstraat 96 Guest'
+  - 'IoT'
