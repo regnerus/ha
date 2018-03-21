@@ -3,7 +3,7 @@ prior: 0.65
 name: Bayesian Status Bouke
 observations:
   - entity_id: 'device_tracker.iphonevanbouke'
-    prob_given_true: 0.8
+    prob_given_true: 0.9
     prob_given_false: 0.2
     platform: 'state'
     to_state: 'home'
