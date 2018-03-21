@@ -1,3 +1,4 @@
 platform: ffmpeg
-input: 'rtsp://192.168.5.24/unicast'
+input: -rtsp_transport tcp -i rtsp://192.168.5.24/unicast
+ffmpeg_bin:  /usr/bin/ffmpeg
 name: Bunny Camera
