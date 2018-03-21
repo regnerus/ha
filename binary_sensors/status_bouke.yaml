@@ -1,5 +1,6 @@
 platform: bayesian
-prior: 0.5
+prior: 0.65
+name: Bayesian Status Bouke
 observations:
   - entity_id: 'device_tracker.iphonevanbouke'
     prob_given_true: 0.8

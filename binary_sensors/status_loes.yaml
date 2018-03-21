@@ -1,13 +1,14 @@
 platform: bayesian
-prior: 0.5
+prior: 0.65
+name: Bayesian Status Loes
 observations:
   - entity_id: 'device_tracker.android9e936e84833e2209'
-    prob_given_true: 0.6
-    prob_given_false: 0.2
+    prob_given_true: 0.7
+    prob_given_false: 0.4
     platform: 'state'
     to_state: 'home'
   - entity_id: 'device_tracker.ipadvanloes'
     prob_given_true: 0.5
-    prob_given_false: 0.3
+    prob_given_false: 0.4
     platform: 'state'
     to_state: 'home'
