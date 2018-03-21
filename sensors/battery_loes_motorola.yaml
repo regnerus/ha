@@ -1,5 +1,5 @@
 platform: mqtt
-state_topic: "owntracks/bouke/motorola"
+state_topic: "owntracks/loes/motorola"
 name: "Battery Motorola Loes"
 unit_of_measurement: "%"
 value_template: '{{ value_json.batt }}'
