@@ -1,0 +1,6 @@
+platform: flux
+lights:
+  - light.living_room_ceiling_light
+  - light.l_table_light
+  - light.h_downstairs_light
+  - light.h_upstairs_light
