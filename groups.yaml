@@ -20,6 +20,7 @@ study_lights_card:
     name: Study Lights
     entities:
       - light.s_main_light
+      - light.desk_light
 
 alarm_clock_card:
     name: Alarm Clock
