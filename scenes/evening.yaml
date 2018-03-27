@@ -1,0 +1,14 @@
+name: Evening
+entities:
+  light.living_room_ceiling_light:
+    state: on
+    brightness: 170
+    color_temp: 381
+  light.dining_light:
+    state: on
+    brightness: 255
+    rgb_color: [255,36,146]
+  light.l_table_light:
+    state: on
+    brightness: 197
+    color_temp: 381

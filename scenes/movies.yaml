@@ -1,0 +1,12 @@
+name: Movies
+entities:
+  light.living_room_ceiling_light:
+    state: off
+  light.dining_light:
+    state: on
+    brightness: 255
+    rgb_color: [36, 146, 255]
+  light.l_table_light:
+    state: on
+    brightness: 130
+    color_temp: 393
