@@ -25,3 +25,13 @@ alarm_clock:
     - "10:00"
     - "10:15"
     - "10:30"
+
+house_mode:
+  name: House Mode
+  icon: mdi:map-marker
+  initial: "home"
+  options:
+    - "home"
+    - "sleeping"
+    - "away"
+    - "vacation"

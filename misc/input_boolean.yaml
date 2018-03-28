@@ -1,8 +1,3 @@
-house_vacation:
-  name: Vacation Mode
-  initial: off
-  icon: mdi:map-marker
-
 alarm_on:
   name: Alarm On/Off
   initial: on
