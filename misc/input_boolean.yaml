@@ -1,3 +1,8 @@
+movie_mode:
+  name: Movie Mode
+  initial: off
+  icon: mdi:movie
+
 alarm_on:
   name: Alarm On/Off
   initial: on
