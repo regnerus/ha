@@ -5,7 +5,6 @@
 *.key
 *.conf
 *.json
-*.py
 *.db-shm
 *.db-wal
 *.html
