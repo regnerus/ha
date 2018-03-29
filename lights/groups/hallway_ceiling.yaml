@@ -1,0 +1,5 @@
+platform: group
+name: Hallway Ceiling Lights
+entities:
+  - light.h_downstairs_light
+  - light.h_upstairs_light
