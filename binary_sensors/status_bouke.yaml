@@ -4,9 +4,21 @@ name: Bayesian Status Bouke
 observations:
   - entity_id: 'device_tracker.iphonevanbouke'
     prob_given_true: 0.9
+    prob_given_false: 0.1
     platform: 'state'
     to_state: 'home'
   - entity_id: 'device_tracker.bouke25748'
     prob_given_true: 0.7
+    prob_given_false: 0.3
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.keys'
+    prob_given_true: 0.5
+    prob_given_false: 0.5
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.backpack'
+    prob_given_true: 0.5
+    prob_given_false: 0.5
     platform: 'state'
     to_state: 'home'
