@@ -1,5 +1,5 @@
 platform: bayesian
-prior: 0.30
+prior: 0.5
 name: Bayesian Status Loes
 observations:
   - entity_id: 'device_tracker.android9e936e84833e2209'
