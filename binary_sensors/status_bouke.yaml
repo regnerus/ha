@@ -8,8 +8,8 @@ observations:
     platform: 'state'
     to_state: 'home'
   - entity_id: 'device_tracker.iphonevanbouke'
-    prob_given_true: 0.8
-    prob_given_false: 0.2
+    prob_given_true: 0.2
+    prob_given_false: 0.8
     platform: 'state'
     to_state: 'not_home'
   - entity_id: 'device_tracker.bouke25748'
