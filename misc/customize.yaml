@@ -98,8 +98,8 @@
     binary_sensor.bayesian_status_loes:
       hidden: true
 
-    binary_sensor.philips_tv:
-      hidden: true
+    # binary_sensor.philips_tv:
+    #   hidden: true
 
     binary_sensor.sonos_play5:
       hidden: true

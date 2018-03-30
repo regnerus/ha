@@ -34,8 +34,8 @@ television_card:
     name: Television
     entities:
       - binary_sensor.philips_tv
-      - media_player.philips_tv
       - input_boolean.movie_mode
+      - media_player.philips_tv
 
 alarm_clock_card:
     name: Alarm Clock
@@ -64,6 +64,7 @@ living_room_view:
     view: yes
     entities: 
       - group.living_room_lights_card
+      - group.television_card
       - media_player.living_room
       # - group.living_room_devices_card
       # - group.living_room_sensors
