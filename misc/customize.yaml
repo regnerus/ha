@@ -85,10 +85,7 @@
 
     device_tracker.keys:
       hidden: true
-
-    device_tracker.laptop:
-      hidden: true
-
+      
     device_tracker.moffel:
       hidden: true    
 
