@@ -41,15 +41,15 @@ living_room_lights_card:
 weather_card:   
     name: Weather
     entities:
-      - sensor.weather_today_condition
-      - sensor.weather_today_current
-      - sensor.weather_today_humidity
-      - sensor.weather_today_pressure
-      - sensor.weather_today_temperature
-      - sensor.weather_today_temperature_max
-      - sensor.weather_today_temperature_min
-      - sensor.weather_today_visibility
-      - sensor.weather_today_wind_speed
+      - sensor.yweather_condition
+      - sensor.yweather_current
+      - sensor.yweather_humidity
+      - sensor.yweather_pressure
+      - sensor.yweather_temperature
+      - sensor.yweather_temperature_max
+      - sensor.yweather_temperature_min
+      - sensor.yweather_visibility
+      - sensor.yweather_wind_speed
 
 living_room_view:
     name: Living Room
@@ -72,17 +72,3 @@ bedroom_view:
       # - group.bathroom_sensors_card
       # - media_player.bedroom_home
       # - camera.crate
-
-people_status:
-  name: People Status
-  view: yes
-  entities:
-    - sensor.bouke
-    - sensor.loes
-
-weather_view: 
-  name: Weather
-  icon: mdi:weather-sunny
-  view: yes
-  entities:
-    - group.weather_card
