@@ -82,7 +82,7 @@ people_status:
 
 weather_view: 
   name: Weather
-    icon: mdi:weather-sunny
-    view: yes
-    entities:
-      - group.weather_card
+  icon: mdi:weather-sunny
+  view: yes
+  entities:
+    - group.weather_card
