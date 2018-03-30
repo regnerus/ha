@@ -4,6 +4,7 @@ port: !secret unifi_port
 username: !secret unifi_username
 password: !secret unifi_password
 verify_ssl: false
+detection_time: 120
 ssid_filter:
   - 'Weth. Beversstraat 96'
 #  - 'Weth. Beversstraat 96 Guest'
