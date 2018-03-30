@@ -10,11 +10,3 @@ observations:
     prob_given_true: 0.7
     platform: 'state'
     to_state: 'home'
-  - entity_id: 'device_tracker.keys'
-    prob_given_true: 0.5
-    platform: 'state'
-    to_state: 'home'
-  - entity_id: 'device_tracker.backpack'
-    prob_given_true: 0.5
-    platform: 'state'
-    to_state: 'home'
