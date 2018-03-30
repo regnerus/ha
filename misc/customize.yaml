@@ -53,6 +53,60 @@
     sensor.l_remote_control:
       hidden: true
 
+    sensor.tradfri_motion_sensor:
+      hidden: true
+
+    device_tracker.android9e936e84833e2209:
+      hidden: true
+
+    device_tracker.backpack:
+      hidden: true
+
+    device_tracker.bouke25748:
+      hidden: true
+
+    device_tracker.desktop9nc9dqb:
+      hidden: true
+
+    device_tracker.googlehome:
+      hidden: true
+
+    device_tracker.ipad_van_loes:
+      hidden: true
+
+    device_tracker.ipadvanloes:
+      hidden: true
+
+    device_tracker.iphone_van_bouke:
+      hidden: true
+
+    device_tracker.iphonevanbouke:
+      hidden: true
+
+    device_tracker.keys:
+      hidden: true
+
+    device_tracker.laptop:
+      hidden: true
+
+    device_tracker.moffel:
+      hidden: true    
+
+    device_tracker.bayesian_status_bouke:
+      hidden: true
+
+    device_tracker.bayesian_status_loes:
+      hidden: true
+
+    binary_sensor.philips_tv:
+      hidden: true
+
+    binary_sensor.sonos_play5:
+      hidden: true
+
+    binary_sensor.tradfri_hub:
+      hidden: true   
+
     sensor.bouke_status:
       entity_picture: /www/bouke.jpg
 
