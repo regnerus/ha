@@ -22,6 +22,21 @@ study_lights_card:
       - light.s_main_light
       - light.desk_light
 
+living_room_lights_card:
+    name: Living Room Lights
+    entities:
+      - scene.evening
+      - light.living_room_ceiling_light
+      - light.l_table_light
+      - light.dining_light
+
+television_card:
+    name: Television
+    entities:
+      - binary_sensor.philips_tv
+      - media_player.philips_tv
+      - input_boolean.movie_mode
+
 alarm_clock_card:
     name: Alarm Clock
     control: hidden
@@ -30,13 +45,6 @@ alarm_clock_card:
       - input_select.alarm_clock
       - input_boolean.alarm_weekday
       - input_boolean.natural_wakeup
-
-living_room_lights_card:
-    name: Living Room Lights
-    entities:
-      - light.living_room_ceiling_light
-      - light.l_table_light
-      - light.dining_light
 
 weather_card:   
     name: Weather

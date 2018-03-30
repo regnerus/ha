@@ -80,6 +80,9 @@
     device_tracker.iphonevanbouke:
       hidden: true
 
+    device_tracker.googlehome:
+      hidden: true   
+
     device_tracker.keys:
       hidden: true
 
@@ -104,7 +107,10 @@
     binary_sensor.tradfri_hub:
       hidden: true   
 
-    binary_sensor.googlehome:
+    binary_sensor.google_home:
+      hidden: true   
+
+    scene.movies:
       hidden: true   
 
     sensor.bouke_status:
