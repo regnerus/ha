@@ -1,5 +1,6 @@
 platform: ffmpeg
 input: -rtsp_transport tcp -i rtsp://192.168.5.24/unicast
 ffmpeg_bin:  /usr/bin/ffmpeg
+extra_arguments: -vf "scale=1280:720"
 # extra_arguments: -pred 1 -q:v 2
 name: Bunny Camera
