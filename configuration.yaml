@@ -113,4 +113,6 @@ mqtt:
   # - platform: philips_tv
   #   host: 192.168.5.23
 
+ffmpeg:
+  
 ios:
