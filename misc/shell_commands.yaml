@@ -1,57 +1,57 @@
 nab_surprise: curl {{ states('input_text.nabaztag_ip_address') }}surprise
-  nab_stop: curl {{ states('input_text.nabaztag_ip_address') }}stop
-  nab_clear: curl {{ states('input_text.nabaztag_ip_address') }}clear
-  nab_sleep: curl {{ states('input_text.nabaztag_ip_address') }}sleep
-  nab_wakeup: curl {{ states('input_text.nabaztag_ip_address') }}wakeup
-  nab_gettime: curl {{ states('input_text.nabaztag_ip_address') }}gettime
-  nab_reboot: curl {{ states('input_text.nabaztag_ip_address') }}reboot
-  nab_communication: curl {{ states('input_text.nabaztag_ip_address') }}communication
-  nab_ack: curl {{ states('input_text.nabaztag_ip_address') }}ack
-  nab_abort: curl {{ states('input_text.nabaztag_ip_address') }}abort
-  nab_ministop: curl {{ states('input_text.nabaztag_ip_address') }}ministop
-  nab_do_taichi_now: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=1000
-  nab_taichi_off: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=0
-  nab_taichi_min: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=40
-  nab_taichi_medium: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=80
-  nab_taichi_max: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=255
-  nab_nose_0: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=0
-  nab_nose_1: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=1
-  nab_nose_2: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=2
-  nab_nose_3: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=3
-  nab_nose_4: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=4
-  nab_ear_left_0: curl {{ states('input_text.nabaztag_ip_address') }}left?p=0&d=0
-  nab_ear_left_1: curl {{ states('input_text.nabaztag_ip_address') }}left?p=1&d=0
-  nab_ear_left_2: curl {{ states('input_text.nabaztag_ip_address') }}left?p=2&d=0
-  nab_ear_left_3: curl {{ states('input_text.nabaztag_ip_address') }}left?p=3&d=0
-  nab_ear_left_4: curl {{ states('input_text.nabaztag_ip_address') }}left?p=4&d=0
-  nab_ear_left_5: curl {{ states('input_text.nabaztag_ip_address') }}left?p=5&d=0
-  nab_ear_left_6: curl {{ states('input_text.nabaztag_ip_address') }}left?p=6&d=0
-  nab_ear_left_7: curl {{ states('input_text.nabaztag_ip_address') }}left?p=7&d=0
-  nab_ear_left_8: curl {{ states('input_text.nabaztag_ip_address') }}left?p=8&d=0
-  nab_ear_left_9: curl {{ states('input_text.nabaztag_ip_address') }}left?p=9&d=0
-  nab_ear_left_10: curl {{ states('input_text.nabaztag_ip_address') }}left?p=10&d=0
-  nab_ear_left_11: curl {{ states('input_text.nabaztag_ip_address') }}left?p=11&d=0
-  nab_ear_left_12: curl {{ states('input_text.nabaztag_ip_address') }}left?p=12&d=0
-  nab_ear_left_13: curl {{ states('input_text.nabaztag_ip_address') }}left?p=13&d=0
-  nab_ear_left_14: curl {{ states('input_text.nabaztag_ip_address') }}left?p=14&d=0
-  nab_ear_left_15: curl {{ states('input_text.nabaztag_ip_address') }}left?p=15&d=0
-  nab_ear_left_16: curl {{ states('input_text.nabaztag_ip_address') }}left?p=16&d=0
-  nab_ear_right_0: curl {{ states('input_text.nabaztag_ip_address') }}right?p=0&d=0
-  nab_ear_right_1: curl {{ states('input_text.nabaztag_ip_address') }}right?p=1&d=0
-  nab_ear_right_2: curl {{ states('input_text.nabaztag_ip_address') }}right?p=2&d=0
-  nab_ear_right_3: curl {{ states('input_text.nabaztag_ip_address') }}right?p=3&d=0
-  nab_ear_right_4: curl {{ states('input_text.nabaztag_ip_address') }}right?p=4&d=0
-  nab_ear_right_5: curl {{ states('input_text.nabaztag_ip_address') }}right?p=5&d=0
-  nab_ear_right_6: curl {{ states('input_text.nabaztag_ip_address') }}right?p=6&d=0
-  nab_ear_right_7: curl {{ states('input_text.nabaztag_ip_address') }}right?p=7&d=0
-  nab_ear_right_8: curl {{ states('input_text.nabaztag_ip_address') }}right?p=8&d=0
-  nab_ear_right_9: curl {{ states('input_text.nabaztag_ip_address') }}right?p=9&d=0
-  nab_ear_right_10: curl {{ states('input_text.nabaztag_ip_address') }}right?p=10&d=0
-  nab_ear_right_11: curl {{ states('input_text.nabaztag_ip_address') }}right?p=11&d=0
-  nab_ear_right_12: curl {{ states('input_text.nabaztag_ip_address') }}right?p=12&d=0
-  nab_ear_right_13: curl {{ states('input_text.nabaztag_ip_address') }}right?p=13&d=0
-  nab_ear_right_14: curl {{ states('input_text.nabaztag_ip_address') }}right?p=14&d=0
-  nab_ear_right_15: curl {{ states('input_text.nabaztag_ip_address') }}right?p=15&d=0
-  nab_ear_right_16: curl {{ states('input_text.nabaztag_ip_address') }}right?p=16&d=0
-  nab_talk: bash /config/www/vl/talk.sh
-  nab_lang_uk: curl {{ states('input_text.nabaztag_ip_address') }}lang?v=uk
+nab_stop: curl {{ states('input_text.nabaztag_ip_address') }}stop
+nab_clear: curl {{ states('input_text.nabaztag_ip_address') }}clear
+nab_sleep: curl {{ states('input_text.nabaztag_ip_address') }}sleep
+nab_wakeup: curl {{ states('input_text.nabaztag_ip_address') }}wakeup
+nab_gettime: curl {{ states('input_text.nabaztag_ip_address') }}gettime
+nab_reboot: curl {{ states('input_text.nabaztag_ip_address') }}reboot
+nab_communication: curl {{ states('input_text.nabaztag_ip_address') }}communication
+nab_ack: curl {{ states('input_text.nabaztag_ip_address') }}ack
+nab_abort: curl {{ states('input_text.nabaztag_ip_address') }}abort
+nab_ministop: curl {{ states('input_text.nabaztag_ip_address') }}ministop
+nab_do_taichi_now: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=1000
+nab_taichi_off: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=0
+nab_taichi_min: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=40
+nab_taichi_medium: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=80
+nab_taichi_max: curl {{ states('input_text.nabaztag_ip_address') }}taichi?v=255
+nab_nose_0: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=0
+nab_nose_1: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=1
+nab_nose_2: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=2
+nab_nose_3: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=3
+nab_nose_4: curl {{ states('input_text.nabaztag_ip_address') }}nose?v=4
+nab_ear_left_0: curl {{ states('input_text.nabaztag_ip_address') }}left?p=0&d=0
+nab_ear_left_1: curl {{ states('input_text.nabaztag_ip_address') }}left?p=1&d=0
+nab_ear_left_2: curl {{ states('input_text.nabaztag_ip_address') }}left?p=2&d=0
+nab_ear_left_3: curl {{ states('input_text.nabaztag_ip_address') }}left?p=3&d=0
+nab_ear_left_4: curl {{ states('input_text.nabaztag_ip_address') }}left?p=4&d=0
+nab_ear_left_5: curl {{ states('input_text.nabaztag_ip_address') }}left?p=5&d=0
+nab_ear_left_6: curl {{ states('input_text.nabaztag_ip_address') }}left?p=6&d=0
+nab_ear_left_7: curl {{ states('input_text.nabaztag_ip_address') }}left?p=7&d=0
+nab_ear_left_8: curl {{ states('input_text.nabaztag_ip_address') }}left?p=8&d=0
+nab_ear_left_9: curl {{ states('input_text.nabaztag_ip_address') }}left?p=9&d=0
+nab_ear_left_10: curl {{ states('input_text.nabaztag_ip_address') }}left?p=10&d=0
+nab_ear_left_11: curl {{ states('input_text.nabaztag_ip_address') }}left?p=11&d=0
+nab_ear_left_12: curl {{ states('input_text.nabaztag_ip_address') }}left?p=12&d=0
+nab_ear_left_13: curl {{ states('input_text.nabaztag_ip_address') }}left?p=13&d=0
+nab_ear_left_14: curl {{ states('input_text.nabaztag_ip_address') }}left?p=14&d=0
+nab_ear_left_15: curl {{ states('input_text.nabaztag_ip_address') }}left?p=15&d=0
+nab_ear_left_16: curl {{ states('input_text.nabaztag_ip_address') }}left?p=16&d=0
+nab_ear_right_0: curl {{ states('input_text.nabaztag_ip_address') }}right?p=0&d=0
+nab_ear_right_1: curl {{ states('input_text.nabaztag_ip_address') }}right?p=1&d=0
+nab_ear_right_2: curl {{ states('input_text.nabaztag_ip_address') }}right?p=2&d=0
+nab_ear_right_3: curl {{ states('input_text.nabaztag_ip_address') }}right?p=3&d=0
+nab_ear_right_4: curl {{ states('input_text.nabaztag_ip_address') }}right?p=4&d=0
+nab_ear_right_5: curl {{ states('input_text.nabaztag_ip_address') }}right?p=5&d=0
+nab_ear_right_6: curl {{ states('input_text.nabaztag_ip_address') }}right?p=6&d=0
+nab_ear_right_7: curl {{ states('input_text.nabaztag_ip_address') }}right?p=7&d=0
+nab_ear_right_8: curl {{ states('input_text.nabaztag_ip_address') }}right?p=8&d=0
+nab_ear_right_9: curl {{ states('input_text.nabaztag_ip_address') }}right?p=9&d=0
+nab_ear_right_10: curl {{ states('input_text.nabaztag_ip_address') }}right?p=10&d=0
+nab_ear_right_11: curl {{ states('input_text.nabaztag_ip_address') }}right?p=11&d=0
+nab_ear_right_12: curl {{ states('input_text.nabaztag_ip_address') }}right?p=12&d=0
+nab_ear_right_13: curl {{ states('input_text.nabaztag_ip_address') }}right?p=13&d=0
+nab_ear_right_14: curl {{ states('input_text.nabaztag_ip_address') }}right?p=14&d=0
+nab_ear_right_15: curl {{ states('input_text.nabaztag_ip_address') }}right?p=15&d=0
+nab_ear_right_16: curl {{ states('input_text.nabaztag_ip_address') }}right?p=16&d=0
+nab_talk: bash /config/www/vl/talk.sh
+nab_lang_uk: curl {{ states('input_text.nabaztag_ip_address') }}lang?v=uk
