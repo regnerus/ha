@@ -1,204 +1,22 @@
-# - alias: Reboot Nabaztag at start
-#   trigger:
-#     - platform: homeassistant
-#       event: start
-#   action:
-#     - service: shell_command.nab_reboot
-#     - service: switch.turn_on
-#       entity_id: switch.nabaztaglife
-# #******************************************************************************
-# - alias: "Startup setup"
-#   trigger:
-#     - platform: homeassistant
-#       event: start
-#   action:
-#     - service: group.set_visibility
-#       entity_id: group.nabaztag_locale_setup
-#       data:
-#         visible: False
-#     - service: input_number.set_value
-#       data_template:
-#         entity_id: input_number.bitcoin_previous_exchange_rate
-#         value: "{{ states('sensor.exchange_rate_1_btc') }}"
-# #******************************************************************************
-# - alias: "Nabaztag Sounds"
-#   trigger:
-#   - platform: state
-#     entity_id: input_select.nabaztag_sounds
-#   condition:
-#     condition: template
-#     value_template: "{{ not is_state('input_select.nabaztag_sounds', ' ') }}"
-#   action:
-#   - service_template: >
-#       {% if is_state("input_select.nabaztag_sounds", "Communication") %} shell_command.nab_communication
-#       {% elif is_state("input_select.nabaztag_sounds", "Ack") %} shell_command.nab_ack
-#       {% elif is_state("input_select.nabaztag_sounds", "Abort") %} shell_command.nab_abort
-#       {% elif is_state("input_select.nabaztag_sounds", "Ministop") %} shell_command.nab_ministop
-#       {% else %}
-#         shell_command.nab_abort
-#       {% endif %}
-#   - service: input_select.select_option
-#     data:
-#       entity_id: input_select.nabaztag_sounds
-#       option: " "
-# #******************************************************************************
-# - alias: "Nabaztag Radio"
-#   trigger:
-#   - platform: state
-#     entity_id: input_select.nabaztag_radio
-#   condition:
-#     condition: template
-#     value_template: "{{ not is_state('input_text.nabaztag_radio', ' ') }}"
-#   action:
-#   - service_template: >
-#       {% if is_state("input_select.nabaztag_radio", "Radio 1") %} shell_command.nab_radio_1
-#       {% elif is_state("input_select.nabaztag_radio", "Radio 2") %} shell_command.nab_radio_2
-#       {% elif is_state("input_select.nabaztag_radio", "Radio 3") %} shell_command.nab_radio_3
-#       {% elif is_state("input_select.nabaztag_radio", "Radio 4") %} shell_command.nab_radio_4
-#       {% elif is_state("input_select.nabaztag_radio", "Radio 5") %} shell_command.nab_radio_5
-#       {% elif is_state("input_select.nabaztag_radio", "No Radio") %} shell_command.nab_abort
-#       {% endif %}
-#   - service: input_select.select_option
-#     data:
-#       entity_id: input_select.nabaztag_radio
-#       option: " "
-# #******************************************************************************
-# - alias: "Nabaztag Talk"
-#   trigger:
-#   - platform: state
-#     entity_id: input_text.nabaztag_voice
-#   condition:
-#     condition: template
-#     value_template: "{{ not is_state('input_text.nabaztag_voice', ' ') }}"
-#   action:
-#   - service: script.nabaztag_talk
-#     data_template:
-#       message: "{{ states('input_text.nabaztag_voice') }}"
-#   - service: input_text.set_value
-#     data:
-#       entity_id: input_text.nabaztag_voice
-#       value: ' '
-# - alias: "Nabaztag Taichi"
-#   trigger:
-#   - platform: state
-#     entity_id: input_select.nabaztag_taichi
-#   action:
-#   - service_template: >
-#       {%-if is_state("input_select.nabaztag_taichi", "Taichi min") %} shell_command.nab_taichi_min
-#       {%-elif is_state("input_select.nabaztag_taichi", "Taichi medium") %} shell_command.nab_taichi_medium
-#       {% elif is_state("input_select.nabaztag_taichi", "Taichi max") %} shell_command.nab_taichi_max
-#       {% else %}
-#         shell_command.nab_surprise
-#       {% endif %}
-# #******************************************************************************
-# - alias: "Nabaztag Nose"
-#   trigger:
-#   - platform: state
-#     entity_id: input_select.nabaztag_nose
-#   action:
-#   - service_template: >
-#       {% if is_state("input_select.nabaztag_nose", "Todo") %} shell_command.nab_nose_2
-#       {% elif is_state("input_select.nabaztag_nose", "Urgent") %} shell_command.nab_nose_3
-#       {% elif is_state("input_select.nabaztag_nose", "Panic") %} shell_command.nab_nose_4
-#       {% else %}
-#         shell_command.nab_abort
-#       {% endif %}
-# #******************************************************************************
-# - alias: "Nabaztag Left Ear"
-#   trigger:
-#   - platform: state
-#     entity_id: input_number.nabaztag_left_ear
-#   action:
-#   - service_template: >
-#       {% if is_state("input_number.nabaztag_left_ear", "0.0") %} shell_command.nab_ear_left_0
-#       {% elif is_state("input_number.nabaztag_left_ear", "1.0") %} shell_command.nab_ear_left_1
-#       {% elif is_state("input_number.nabaztag_left_ear", "2.0") %} shell_command.nab_ear_left_2
-#       {% elif is_state("input_number.nabaztag_left_ear", "3.0") %} shell_command.nab_ear_left_3
-#       {% elif is_state("input_number.nabaztag_left_ear", "4.0") %} shell_command.nab_ear_left_4
-#       {% elif is_state("input_number.nabaztag_left_ear", "5.0") %} shell_command.nab_ear_left_5
-#       {% elif is_state("input_number.nabaztag_left_ear", "6.0") %} shell_command.nab_ear_left_6
-#       {% elif is_state("input_number.nabaztag_left_ear", "7.0") %} shell_command.nab_ear_left_7
-#       {% elif is_state("input_number.nabaztag_left_ear", "8.0") %} shell_command.nab_ear_left_8
-#       {% elif is_state("input_number.nabaztag_left_ear", "9.0") %} shell_command.nab_ear_left_9
-#       {% elif is_state("input_number.nabaztag_left_ear", "10.0") %} shell_command.nab_ear_left_10
-#       {% elif is_state("input_number.nabaztag_left_ear", "11.0") %} shell_command.nab_ear_left_11
-#       {% elif is_state("input_number.nabaztag_left_ear", "12.0") %} shell_command.nab_ear_left_12
-#       {% elif is_state("input_number.nabaztag_left_ear", "13.0") %} shell_command.nab_ear_left_13
-#       {% elif is_state("input_number.nabaztag_left_ear", "14.0") %} shell_command.nab_ear_left_14
-#       {% elif is_state("input_number.nabaztag_left_ear", "15.0") %} shell_command.nab_ear_left_15
-#       {% elif is_state("input_number.nabaztag_left_ear", "16.0") %} shell_command.nab_ear_left_16
-#       {% else %}
-#         shell_command.nab_abort
-#       {% endif %}
-# #******************************************************************************
-# - alias: "Nabaztag Right Ear"
-#   trigger:
-#   - platform: state
-#     entity_id: input_number.nabaztag_right_ear
-#   action:
-#   - service_template: >
-#       {% if is_state("input_number.nabaztag_right_ear", "0.0") %} shell_command.nab_ear_right_0
-#       {% elif is_state("input_number.nabaztag_right_ear", "1.0") %} shell_command.nab_ear_right_1
-#       {% elif is_state("input_number.nabaztag_right_ear", "2.0") %} shell_command.nab_ear_right_2
-#       {% elif is_state("input_number.nabaztag_right_ear", "3.0") %} shell_command.nab_ear_right_3
-#       {% elif is_state("input_number.nabaztag_right_ear", "4.0") %} shell_command.nab_ear_right_4
-#       {% elif is_state("input_number.nabaztag_right_ear", "5.0") %} shell_command.nab_ear_right_5
-#       {% elif is_state("input_number.nabaztag_right_ear", "6.0") %} shell_command.nab_ear_right_6
-#       {% elif is_state("input_number.nabaztag_right_ear", "7.0") %} shell_command.nab_ear_right_7
-#       {% elif is_state("input_number.nabaztag_right_ear", "8.0") %} shell_command.nab_ear_right_8
-#       {% elif is_state("input_number.nabaztag_right_ear", "9.0") %} shell_command.nab_ear_right_9
-#       {% elif is_state("input_number.nabaztag_right_ear", "10.0") %} shell_command.nab_ear_right_10
-#       {% elif is_state("input_number.nabaztag_right_ear", "11.0") %} shell_command.nab_ear_right_11
-#       {% elif is_state("input_number.nabaztag_right_ear", "12.0") %} shell_command.nab_ear_right_12
-#       {% elif is_state("input_number.nabaztag_right_ear", "13.0") %} shell_command.nab_ear_right_13
-#       {% elif is_state("input_number.nabaztag_right_ear", "14.0") %} shell_command.nab_ear_right_14
-#       {% elif is_state("input_number.nabaztag_right_ear", "15.0") %} shell_command.nab_ear_right_15
-#       {% elif is_state("input_number.nabaztag_right_ear", "16.0") %} shell_command.nab_ear_right_16
-#       {% else %}
-#         shell_command.nab_abort
-#       {% endif %}
-# #******************************************************************************
-# - alias: "Nabaztag Body Language"
-#   trigger:
-#   - platform: state
-#     entity_id: input_select.nabaztag_body_language
-#   action:
-#   - service: input_number.set_value
-#     data_template:
-#       entity_id: input_number.nabaztag_left_ear
-#       value: >
-#         {% if is_state("input_select.nabaztag_body_language", "Listening") %} 2.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Curious") %} 16.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Crazy") %} 3.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Scared") %} 14.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Sad") %} 11.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Up") %} 0.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Down") %} 10.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Left") %} 11.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Right") %} 0.0
-#         {% endif %}
-#   - service: input_number.set_value
-#     data_template:
-#       entity_id: input_number.nabaztag_right_ear
-#       value: >
-#         {% if is_state("input_select.nabaztag_body_language", "Listening") %} 2.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Curious") %} 2.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Crazy") %} 14.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Scared") %} 14.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Sad") %} 11.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Up") %} 0.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Down") %} 10.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Left") %} 0.0
-#         {% elif is_state("input_select.nabaztag_body_language", "Right") %} 11.0
-#         {% endif %}
-# - alias: "Keep it off if it resets and turns on"
-# trigger:
-# - platform: time
-#   minutes: '/1'
-#   seconds: 00
-# condition:
-# - condition: state
-#   entity_id: 'input_boolean.nabaztag_is_awake'
-#   state: 'off'
-# action:
-# - service: shell_command.nab_sleep
+- alias: Reboot Nabaztag at start
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: shell_command.nab_reboot
+    - service: switch.turn_on
+      entity_id: switch.nabaztaglife
+#******************************************************************************
+- alias: "Startup setup"
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: group.set_visibility
+      entity_id: group.nabaztag_locale_setup
+      data:
+        visible: False
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.bitcoin_previous_exchange_rate
+        value: "{{ states('sensor.exchange_rate_1_btc') }}"
