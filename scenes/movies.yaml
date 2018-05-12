@@ -1,7 +1,9 @@
 name: Movies
 entities:
   light.living_room_ceiling_light:
-    state: off
+    state: on
+    brightness: 20
+    color_temp: 393
   light.dining_light:
     state: on
     brightness: 255
