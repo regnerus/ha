@@ -1,20 +1,20 @@
 alias: "Nabaztag Sounds"
 trigger:
-- platform: state
-  entity_id: input_select.nabaztag_sounds
+  - platform: state
+    entity_id: input_select.nabaztag_sounds
 condition:
   condition: template
   value_template: "{{ not is_state('input_select.nabaztag_sounds', ' ') }}"
 action:
-- service_template: >
-    {% if is_state("input_select.nabaztag_sounds", "Communication") %} shell_command.nab_communication
-    {% elif is_state("input_select.nabaztag_sounds", "Ack") %} shell_command.nab_ack
-    {% elif is_state("input_select.nabaztag_sounds", "Abort") %} shell_command.nab_abort
-    {% elif is_state("input_select.nabaztag_sounds", "Ministop") %} shell_command.nab_ministop
-    {% else %}
-      shell_command.nab_abort
-    {% endif %}
-- service: input_select.select_option
-  data:
-    entity_id: input_select.nabaztag_sounds
-    option: " "
+  - service_template: >
+      {% if is_state("input_select.nabaztag_sounds", "Communication") %} shell_command.nab_communication
+      {% elif is_state("input_select.nabaztag_sounds", "Ack") %} shell_command.nab_ack
+      {% elif is_state("input_select.nabaztag_sounds", "Abort") %} shell_command.nab_abort
+      {% elif is_state("input_select.nabaztag_sounds", "Ministop") %} shell_command.nab_ministop
+      {% else %}
+        shell_command.nab_abort
+      {% endif %}
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.nabaztag_sounds
+      option: " "

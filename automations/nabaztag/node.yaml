@@ -1,12 +1,12 @@
 alias: "Nabaztag Nose"
 trigger:
-  platform: state
-  entity_id: input_select.nabaztag_nose
+  - platform: state
+    entity_id: input_select.nabaztag_nose
 action:
-  service_template: >
-    {% if is_state("input_select.nabaztag_nose", "Todo") %} shell_command.nab_nose_2
-    {% elif is_state("input_select.nabaztag_nose", "Urgent") %} shell_command.nab_nose_3
-    {% elif is_state("input_select.nabaztag_nose", "Panic") %} shell_command.nab_nose_4
-    {% else %}
-      shell_command.nab_abort
-    {% endif %}
+  - service_template: >
+      {% if is_state("input_select.nabaztag_nose", "Todo") %} shell_command.nab_nose_2
+      {% elif is_state("input_select.nabaztag_nose", "Urgent") %} shell_command.nab_nose_3
+      {% elif is_state("input_select.nabaztag_nose", "Panic") %} shell_command.nab_nose_4
+      {% else %}
+        shell_command.nab_abort
+      {% endif %}
