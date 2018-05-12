@@ -1,0 +1,88 @@
+nabaztag_talk:
+  alias: Nabaztag talk
+  sequence:
+    - alias: Nabaztag Google TTS
+      service: tts.google_say
+      entity_id: media_player.nabaztag
+      data_template: 
+        message: >
+          '{{ message }}'
+        language: "{{ states('input_text.nabaztag_tts_language') }}"
+        cache: True
+    - alias: Call bash script with curl command
+      service: shell_command.nab_talk
+    - alias: Clearing Google TTS
+      service: tts.clear_cache
+#******************************************************************************
+nabaztag_surprise:
+  alias: Talk!
+  sequence:
+    - service: shell_command.nab_surprise
+#******************************************************************************
+nabaztag_stop:
+  alias: Shut Up!
+  sequence:
+    - service: shell_command.nab_stop
+#******************************************************************************
+nabaztag_info_off:
+  alias: Info Off
+  sequence:
+    - service: shell_command.nab_clear
+#******************************************************************************
+nabaztag_update:
+  alias: Sync Time
+  sequence:
+    - service: shell_command.nab_gettime
+#******************************************************************************
+nabaztag_reboot:
+  alias: Reboot
+  sequence:
+    - service: shell_command.nab_reboot
+#******************************************************************************
+nabaztag_wakeup:
+  alias: Wake Up
+  sequence:
+    - service: shell_command.nab_wakeup
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.nabaztaglife
+#******************************************************************************
+nabaztag_sleep:
+  alias: Sleep
+  sequence:
+    - service: shell_command.nab_sleep
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.nabaztaglife
+#******************************************************************************
+nabaztag_taichi:
+  alias: Taichi
+  sequence:
+    - service: shell_command.nab_do_taichi_now
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.nabaztag_taichi
+#******************************************************************************
+nabaztag_no_taichi:
+  alias: No Taichi
+  sequence:
+    - service: shell_command.nab_taichi_off
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.nabaztag_taichi
+#******************************************************************************
+nabaztag_nose_on:
+  alias: Nose On
+  sequence:
+    - service: shell_command.nab_nose_1
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.nabaztag_nose
+#******************************************************************************
+nabaztag_nose_off:
+  alias: Nose Off
+  sequence:
+    - service: shell_command.nab_nose_0
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.nabaztag_nose
