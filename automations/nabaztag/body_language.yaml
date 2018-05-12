@@ -1,9 +1,9 @@
 alias: "Nabaztag Body Language"
 trigger:
-- platform: state
+  platform: state
   entity_id: input_select.nabaztag_body_language
 action:
-- service: input_number.set_value
+  service: input_number.set_value
   data_template:
     entity_id: input_number.nabaztag_left_ear
     value: >
@@ -17,7 +17,7 @@ action:
       {% elif is_state("input_select.nabaztag_body_language", "Left") %} 11.0
       {% elif is_state("input_select.nabaztag_body_language", "Right") %} 0.0
       {% endif %}
-- service: input_number.set_value
+  service: input_number.set_value
   data_template:
     entity_id: input_number.nabaztag_right_ear
     value: >

@@ -1,9 +1,9 @@
 alias: "Nabaztag Left Ear"
 trigger:
-- platform: state
+  platform: state
   entity_id: input_number.nabaztag_left_ear
 action:
-- service_template: >
+  service_template: >
     {% if is_state("input_number.nabaztag_left_ear", "0.0") %} shell_command.nab_ear_left_0
     {% elif is_state("input_number.nabaztag_left_ear", "1.0") %} shell_command.nab_ear_left_1
     {% elif is_state("input_number.nabaztag_left_ear", "2.0") %} shell_command.nab_ear_left_2
