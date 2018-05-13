@@ -59,6 +59,8 @@ sun:
 # Text to speech
 tts:
   - platform: google
+    cache: true
+    cache_dir: /config/www/vl/voice
 
 # Cloud
 #cloud:
@@ -111,6 +113,8 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
   certificate: auto
+  keepalive: 60
+  protocol: 3.1 
 
   # - platform: philips_tv
   #   host: 192.168.5.23
