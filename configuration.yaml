@@ -12,7 +12,7 @@ homeassistant:
   time_zone: Europe/Amsterdam
   # Customization file
   customize: !include misc/customize.yaml
-
+  packages: !include_dir_named packages
 # Show links to resources in log and frontend
 #introduction:
 

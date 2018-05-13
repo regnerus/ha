@@ -17,16 +17,3 @@ natural_wakeup:
   name: Natural Wakeup
   initial: on
   icon: mdi:theme-light-dark
-
-show_nabaztag_locales:
-  name: Locales Setup
-  initial: off
-  icon: mdi:tune
-nabaztaglife:
-  initial: off
-nabaztag_taichi:
-  initial: off
-nabaztag_nose:
-  initial: off
-nabaztag_is_awake:
-  initial: off
