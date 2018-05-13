@@ -1,1 +1,11 @@
-[]
+  - alias: "Restart HA during the weekend"
+    trigger: 
+      platform: time
+      at: "08:00:00"
+    condition:
+      condition: time
+      weekday:
+      - sat
+      - sun
+    action:
+      - service: homeassistant.restart
