@@ -69,7 +69,7 @@ hassio:
 
 ###########INCLUDES#####
 alert: !include_dir_merge_named alerts/
-automation: !include_dir_merge_named automations/
+automation: !include automations.yaml
 device_tracker: !include_dir_list device_trackers/
 input_boolean: !include misc/input_boolean.yaml
 input_select: !include misc/input_select.yaml
