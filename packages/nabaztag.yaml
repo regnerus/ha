@@ -471,3 +471,38 @@ automation:
       state: 'off'
     action:
     - service: shell_command.nab_sleep
+
+#------------------------------------------------------------------------------
+group:
+#------------------------------------------------------------------------------
+  nabaztag_body:
+    name: Nabaztag Body
+    control: hidden
+    entities:
+      - switch.nabaztag_taichi
+      - input_select.nabaztag_taichi
+      - switch.nabaztag_nose
+      - input_select.nabaztag_nose
+      - input_number.nabaztag_left_ear
+      - input_number.nabaztag_right_ear
+      - input_select.nabaztag_body_language
+  nabaztag_lights:
+    name: Nabaztag Info
+    control: hidden
+    entities:
+      - script.nabaztag_info_off
+  nabaztag_utils:
+    name: Nabaztag Utils
+    control: hidden
+    entities:
+      - switch.nabaztaglife
+      - script.nabaztag_surprise
+      - script.nabaztag_stop
+      - input_select.nabaztag_sounds
+      - input_text.nabaztag_voice
+  nabaztag_locale_setup:
+    name: Nabaztag Locales
+    control: hidden
+    entities:
+      - script.nabaztag_update
+      - script.nabaztag_reboot
