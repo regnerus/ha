@@ -39,8 +39,6 @@ input_text:
 #------------------------------------------------------------------------------
 input_boolean:
 #------------------------------------------------------------------------------
-  nabaztaglife:
-    initial: off
   nabaztag_taichi:
     initial: off
   nabaztag_nose:
@@ -112,17 +110,11 @@ script:
     alias: Wake Up
     sequence:
       - service: shell_command.nab_wakeup
-      - service: input_boolean.turn_on
-        data:
-          entity_id: input_boolean.nabaztaglife
 #******************************************************************************
   nabaztag_sleep:
     alias: Sleep
     sequence:
       - service: shell_command.nab_sleep
-      - service: input_boolean.turn_off
-        data:
-          entity_id: input_boolean.nabaztaglife
 #******************************************************************************
   nabaztag_taichi:
     alias: Taichi
@@ -160,15 +152,6 @@ switch:
 #------------------------------------------------------------------------------
   - platform: template
     switches:
-      nabaztaglife:
-        friendly_name: Nabaztag Switch
-        value_template: "{{ is_state('input_boolean.nabaztaglife', 'on') }}"
-        turn_on:
-        - service: script.turn_on
-          entity_id: script.nabaztag_wakeup
-        turn_off:
-        - service: script.turn_on
-          entity_id: script.nabaztag_sleep
       nabaztag_taichi:
         friendly_name: Let's Taichi
         value_template: "{{ is_state('input_boolean.nabaztag_taichi', 'on') }}"
@@ -300,14 +283,6 @@ shell_command:
 #------------------------------------------------------------------------------
 automation:
 #------------------------------------------------------------------------------
-  - alias: Reboot Nabaztag at start
-    trigger:
-      - platform: homeassistant
-        event: start
-    action:
-      - service: shell_command.nab_reboot
-      - service: switch.turn_on
-        entity_id: switch.nabaztaglife
 #******************************************************************************
   - alias: "Nabaztag Sounds"
     trigger:
@@ -459,18 +434,6 @@ automation:
           {% elif is_state("input_select.nabaztag_body_language", "Left") %} 0.0
           {% elif is_state("input_select.nabaztag_body_language", "Right") %} 11.0
           {% endif %}
-#******************************************************************************
-  - alias: "Keep it off if it resets and turns on"
-    trigger:
-    - platform: time
-      minutes: '/1'
-      seconds: 00
-    condition:
-    - condition: state
-      entity_id: 'input_boolean.nabaztag_is_awake'
-      state: 'off'
-    action:
-    - service: shell_command.nab_sleep
 
 #------------------------------------------------------------------------------
 group:
@@ -495,7 +458,6 @@ group:
     name: Nabaztag Utils
     control: hidden
     entities:
-      - switch.nabaztaglife
       - script.nabaztag_surprise
       - script.nabaztag_stop
       - input_select.nabaztag_sounds
