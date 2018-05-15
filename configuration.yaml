@@ -114,10 +114,6 @@ mqtt:
   password: !secret mqtt_password
   certificate: auto
   keepalive: 60
-  protocol: 3.1 
-
-  # - platform: philips_tv
-  #   host: 192.168.5.23
 
 ffmpeg:
   
