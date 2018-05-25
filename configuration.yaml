@@ -105,7 +105,7 @@ google_assistant:
     - media_player
 
 tradfri:
-  host: 192.168.1.20
+  host: !secret tradfri_ip
 
 mqtt:
   broker: !secret mqtt_broker_ip
@@ -114,6 +114,12 @@ mqtt:
   password: !secret mqtt_password
   certificate: auto
   keepalive: 60
+
+shinobi:
+  host: !secret shinobi_ip
+  api_key: !secret shinobi_api 
+  group_key: !secret shinobi_group
+  ssl: false
 
 ffmpeg:
   
