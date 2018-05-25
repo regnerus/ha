@@ -115,12 +115,6 @@ mqtt:
   certificate: auto
   keepalive: 60
 
-shinobi:
-  host: !secret shinobi_ip
-  api_key: !secret shinobi_api 
-  group_key: !secret shinobi_group
-  ssl: false
-
 ffmpeg:
   
 ios:
