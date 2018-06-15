@@ -42,6 +42,7 @@ updater:
 discovery:
   ignore:
     - sonos
+    - ikea_tradfri
   enable:
     - homekit
 
