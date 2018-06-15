@@ -35,3 +35,14 @@ house_mode:
     - "sleeping"
     - "away"
     - "vacation"
+
+# house_mode:
+#   name: House Mode
+#   icon: mdi:map-marker
+#   initial: "home"
+#   options:
+#     - "bright"
+#     - "relax"
+#     - "concentrate"
+#     - "nightlight"
+#     - "vacation"

@@ -1,0 +1,12 @@
+platform: bayesian
+prior: 0.2
+name: Hallway IKEA Switch
+observations:
+  - entity_id: 'light.h_downstairs_light'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
+  - entity_id: 'light.h_upstairs_light'
+    prob_given_true: 0.6
+    platform: 'state'
+    to_state: 'on'

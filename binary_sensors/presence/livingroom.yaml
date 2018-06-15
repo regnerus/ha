@@ -1,0 +1,4 @@
+platform: bayesian
+prior: 0.2
+name: Livingroom Presence
+observations:
