@@ -1,5 +1,5 @@
 platform: bayesian
-prior: 0.5
+prior: 0.2
 name: Bedroom IKEA Switch
 observations:
   - entity_id: 'light.b_bedside_bouke'

@@ -1,5 +1,5 @@
 platform: bayesian
-prior: 0.5
+prior: 0.2
 name: Livingroom IKEA Switch
 observations:
   - entity_id: 'light.l_table_light'
