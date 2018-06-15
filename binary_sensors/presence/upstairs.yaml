@@ -2,7 +2,20 @@ platform: bayesian
 prior: 0.2
 name: Upstairs Presence
 observations:
-  # - entity_id: 'binary_sensor.hallway_ikea_switch'
-  #   prob_given_true: 0.8
-  #   platform: 'state'
-  #   to_state: 'on'
+  - entity_id: 'binary_sensor.bedroom_presence'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
+  - entity_id: 'binary_sensor.study_presence'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
+  - entity_id: 'binary_sensor.hallway_upstairs_presence'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
+  - entity_id: 'binary_sensor.spare_bedroom_presence'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
+    

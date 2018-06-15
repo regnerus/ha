@@ -2,7 +2,11 @@ platform: bayesian
 prior: 0.2
 name: House Presence
 observations:
-  # - entity_id: 'binary_sensor.hallway_ikea_switch'
-  #   prob_given_true: 0.8
-  #   platform: 'state'
-  #   to_state: 'on'
+  - entity_id: 'binary_sensor.downstairs_presence'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
+  - entity_id: 'binary_sensor.upstairs_presence'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
