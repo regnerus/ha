@@ -1,0 +1,13 @@
+platform: bayesian
+prior: 0.5
+name: Sunset
+observations:
+  - entity_id: 'sun.sun'
+    prob_given_true: 0.2
+    platform: 'state'
+    to_state: 'above_horizon'
+  - entity_id: 'sun.sun'
+    prob_given_true: 0.9
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'below_horizon'
