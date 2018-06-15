@@ -1,8 +1,8 @@
-# platform: bayesian
-# prior: 0.2
-# name: Hallway Downstairs Presence
-# observations:
-#   - entity_id: 'binary_sensor.hallway_ikea_switch'
-#     prob_given_true: 0.8
-#     platform: 'state'
-#     to_state: 'on'
+platform: bayesian
+prior: 0.2
+name: Downstairs Presence
+observations:
+  # - entity_id: 'binary_sensor.hallway_ikea_switch'
+  #   prob_given_true: 0.8
+  #   platform: 'state'
+  #   to_state: 'on'
