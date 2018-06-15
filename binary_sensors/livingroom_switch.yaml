@@ -1,0 +1,8 @@
+platform: bayesian
+prior: 0.5
+name: Livingroom IKEA Switch
+observations:
+  - entity_id: 'light.l_table_light'
+    prob_given_true: 0.9
+    platform: 'state'
+    to_state: 'on'

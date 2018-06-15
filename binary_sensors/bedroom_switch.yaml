@@ -1,0 +1,12 @@
+platform: bayesian
+prior: 0.5
+name: Bedroom IKEA Switch
+observations:
+  - entity_id: 'light.b_bedside_bouke'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
+  - entity_id: 'light.b_bedside_loes'
+    prob_given_true: 0.8
+    platform: 'state'
+    to_state: 'on'
